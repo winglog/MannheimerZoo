@@ -1,7 +1,9 @@
 import { createStore, combineReducers } from 'redux';
 import { reducer as reduxFormReducer } from 'redux-form';
+import tilesReducer from './reducers/tilesReducer';
 
 const reducer = combineReducers({
+  tiles: tilesReducer,
   form: reduxFormReducer, // mounted under "form"
 });
 

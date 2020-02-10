@@ -3,40 +3,47 @@ import AccessibilityNewSharpIcon from '@material-ui/icons/AccessibilityNewSharp'
 import AccessAlarmSharpIcon from '@material-ui/icons/AccessAlarmSharp';
 
 const aCards = [{
-  "title": "Contact Form",
+  "title": "Zebra",
   "displayIcon": () => {
     return (<AccessibilityNewSharpIcon />);
-  }
+  },
+  "visible": true
 },{
-  "title": "Material UI Form",
+  "title": "Tiger",
   "displayIcon": () => {
     return (<AccessAlarmSharpIcon />);
-  }
+  },
+  "visible": true
 },{
-  "title": "Material UI Form",
+  "title": "Adler",
   "displayIcon": () => {
     return (<AccessibilityNewSharpIcon />);
-  }
+  },
+  "visible": true
 },{
-  "title": "Material UI Form",
+  "title": "Papagei",
   "displayIcon": () => {
     return (<AccessAlarmSharpIcon />);
-  }
+  },
+  "visible": true
 },{
-  "title": "Material UI Form 3",
+  "title": "Hund",
   "displayIcon": () => {
     return (<AccessibilityNewSharpIcon />);
-  }
+  },
+  "visible": true
 },{
-  "title": "Material UI Form",
+  "title": "Nashorn",
   "displayIcon": () => {
     return (<AccessAlarmSharpIcon />);
-  }
+  },
+  "visible": true
 },{
-  "title": "Material UI Form",
+  "title": "Kobra",
   "displayIcon": () => {
     return (<AccessAlarmSharpIcon />);
-  }
+  },
+  "visible": true
 }];
 
 export default aCards;
