@@ -1,0 +1,7 @@
+{
+  "workbench.colorTheme": "Monokai Dimmed",
+  "editor.snippetSuggestions": "top",
+  "files.associations": {
+    "*.js": "javascriptreact"
+  }
+}
