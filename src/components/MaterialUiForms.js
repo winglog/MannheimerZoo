@@ -4,20 +4,35 @@
  *
  * Use buttonStyle to decorate buttons
  * Use TextField fullWidth={true} to have an Input Field take up the full width of its container!
- *
+ * Use style
  ****************************************************************************/
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
-import TextField from '@material-ui/core/TextField'
-import Checkbox from '@material-ui/core/Checkbox'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import FormControl from '@material-ui/core/FormControl'
-import Select from '@material-ui/core/Select'
-import InputLabel from '@material-ui/core/InputLabel'
-import FormHelperText from '@material-ui/core/FormHelperText'
-import Radio from '@material-ui/core/Radio'
-import RadioGroup from '@material-ui/core/RadioGroup'
-import asyncValidate from './asyncValidate'
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+
+import TextField from '@material-ui/core/TextField';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import asyncValidate from './asyncValidate';
+
+
+const buttonStyle = {
+  padding: '10px 20px',
+  width: '200px',
+  display: 'block',
+  margin: '20px auto',
+  fontSize: '18px'
+}
+
+const selectBoxStyle = {
+  minWidth: '200px',
+  fontSize: '18px'
+}
 
 const validate = values => {
   const errors = {}
@@ -97,31 +112,26 @@ const renderSelectField = ({
   meta: { touched, error },
   children,
   ...custom
-}) => (
-  <FormControl error={touched && error}>
-    <InputLabel htmlFor="color-native-simple">{label}</InputLabel>
-    <Select
-      native
-      {...input}
-      {...custom}
-      inputProps={{
-        name: input.name,
-        id: 'color-native-simple'
-      }}
-    >
-      {children}
-    </Select>
-    {renderFromHelper({ touched, error })}
-  </FormControl>
-)
-
-const buttonStyle = {
-  padding: '10px 20px',
-  width: 140,
-  display: 'block',
-  margin: '20px auto',
-  fontSize: '16px'
+}) => {
+  return (
+    <FormControl error={touched && error}>
+      <InputLabel htmlFor="color-native-simple">{label}</InputLabel>
+      <Select style={selectBoxStyle}
+        native
+        {...input}
+        {...custom}
+        inputProps={{
+          name: input.name,
+          id: 'color-native-simple'
+        }}
+      >
+        {children}
+      </Select>
+      {renderFromHelper({ touched, error })}
+    </FormControl>
+  )
 }
+
 
 const MaterialUiForm = props => {
   const { handleSubmit, pristine, reset, submitting, classes } = props
