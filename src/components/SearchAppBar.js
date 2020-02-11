@@ -1,4 +1,16 @@
+/***
+ *
+ * Lessons learnt:
+ *
+ * The line
+ *
+ *    let history = useHistory();
+ *
+ * must be placed within the functional component SearchAppBar. Not outside!
+ *
+ */
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 
@@ -11,7 +23,7 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import TextField from '@material-ui/core/TextField';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles(theme => ({
@@ -67,10 +79,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
 export default function SearchAppBar() {
   const classes = useStyles();
 
   const dispatch = useDispatch();
+
+  let history = useHistory();
+  const onClickHomeButton = () => {
+    const pattern = '/';
+    history.push(pattern);
+  };
 
   const [myValue, setValue] = useState('');
 
@@ -83,8 +102,11 @@ export default function SearchAppBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={(event)=>{
+              onClickHomeButton();
+            }}
           >
-            <MenuIcon />
+            <HomeIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Material-UI
