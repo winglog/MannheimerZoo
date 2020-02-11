@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
+
 import { makeStyles } from '@material-ui/core/styles';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 import Paper from '@material-ui/core/Paper';
@@ -43,7 +44,7 @@ export default function NestedGrid() {
           return [
             <React.Fragment key={index}>
               <Grid item xs={12} sm={6} md={3} lg={2}>
-                <Tile displayIcon={card.displayIcon} title={card.title}/>
+                <Tile displayIcon={card.displayIcon} title={card.title} />
               </Grid>
             </React.Fragment>
           ]

@@ -1,4 +1,8 @@
+
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { HashRouter as Router, Link } from "react-router-dom";
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -27,10 +31,24 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
 export default function Tile({displayIcon, title}) {
   const classes = useStyles();
+
+  let history = useHistory();
+
+  const onRedirect = (target) => {
+
+    const pattern = '/' + target;
+    console.log(pattern);
+    history.push(pattern);
+
+  };
+
   return (
-    <Card className={classes.root} elevation={3} variant="outlined">
+    <Card className={classes.root} elevation={3} variant="outlined" onClick={(event)=>{
+      onRedirect(title);
+    }}>
       <CardActionArea>
         <CardContent className={classes.content}>
           {displayIcon()}
