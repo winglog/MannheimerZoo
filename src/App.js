@@ -9,7 +9,8 @@ import allActions from './actions';
 import SearchAppBar from './components/SearchAppBar';
 import Dashboard from './components/Dashboard';
 
-import MyFormPage from './components/MyFormPage';
+import Zebra from './components/pages/Zebra';
+import Tiger from './components/pages/Tiger';
 
 export default function App() {
 
@@ -24,7 +25,8 @@ export default function App() {
       <SearchAppBar/>
       <Switch>
         <Route exact path="/" component={Dashboard} />
-        <Route exact path="/Zebra" component={MyFormPage} />
+        <Route exact path="/Zebra" component={Zebra} />
+        <Route exact path="/Tiger" component={Tiger} />
       </Switch>
     </Router>
   )
