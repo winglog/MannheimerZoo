@@ -3,6 +3,7 @@
  *
  * Use Container inside Container to do horizontal centering!
  * Use Typography to set background color behind your form!
+ * Use useTheme-hook to reference the main theme colors
  *
  ****************************************************************************/
  import React from 'react';
@@ -13,12 +14,18 @@ import Container from '@material-ui/core/Container';
 import MaterialUiForms from '../MaterialUiForms';
 import showResults from "../showResults";
 
+import { useTheme } from '@material-ui/core/styles';
+
 const Tiger = () => {
+
+  const theme = useTheme();
+
   return (
     <React.Fragment>
       <Container maxWidth="lg">
         <Typography component="div" style={{
-          backgroundColor: '#ececec',
+          backgroundColor: theme.palette.primary.main,
+          color: theme.palette.primary.contrastText,
           height: '8vh',
           padding: 20
         }}>
@@ -34,7 +41,8 @@ const Tiger = () => {
           </Container>
         </Typography>
         <Typography component="div" style={{
-          backgroundColor: '#ececec',
+          backgroundColor: theme.palette.primary.main,
+          color: theme.palette.primary.contrastText,
           height: '8vh',
           padding: 20
         }}>
