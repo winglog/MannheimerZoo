@@ -22,8 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     height: 240,
-    color: theme.palette.text.secondary,
-    backgroundColor: blueGrey[50]
+    color: theme.palette.text.secondary
   },
   distanceTop: {
     marginTop: 20

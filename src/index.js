@@ -19,18 +19,20 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+import rgb from '@material-ui/core/colors/lightGreen';
+
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#757ce8',
-      main: '#3f50b5',
-      dark: '#002884',
+      light: rgb[500],
+      main: rgb[700],
+      dark: rgb[900],
       contrastText: '#fff',
     },
     secondary: {
-      light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
+      light: rgb[100],
+      main: rgb[200],
+      dark: rgb[400],
       contrastText: '#000',
     },
   },
