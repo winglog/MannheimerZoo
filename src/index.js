@@ -1,3 +1,12 @@
+/**
+ * 
+ * Lessons learnt:
+ * 
+ * <CssBaseline /> acts as normalize.css
+ * 
+ * 
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -8,6 +17,7 @@ import store from './store';
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const theme = createMuiTheme({
   palette: {
@@ -29,6 +39,7 @@ const theme = createMuiTheme({
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
+      <CssBaseline />
       <App />
     </MuiThemeProvider>
   </Provider>,
