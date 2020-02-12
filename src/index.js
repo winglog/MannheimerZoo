@@ -1,10 +1,10 @@
 /**
- * 
+ *
  * Lessons learnt:
- * 
+ *
  * <CssBaseline /> acts as normalize.css
- * 
- * 
+ *
+ *
  */
 
 import React from 'react';

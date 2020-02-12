@@ -96,7 +96,7 @@ export default function SearchAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar id="back-to-top-anchor">
           <IconButton
             edge="start"
             className={classes.menuButton}
