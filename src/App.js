@@ -11,6 +11,7 @@ import Dashboard from './components/Dashboard';
 
 import Zebra from './components/pages/Zebra';
 import Tiger from './components/pages/Tiger';
+import Adler from './components/pages/Adler';
 
 export default function App() {
 
@@ -27,6 +28,7 @@ export default function App() {
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/Zebra" component={Zebra} />
         <Route exact path="/Tiger" component={Tiger} />
+        <Route exact path="/Adler" component={Adler} />
       </Switch>
     </Router>
   )
