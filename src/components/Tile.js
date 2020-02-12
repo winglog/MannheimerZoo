@@ -14,7 +14,7 @@ import blueGrey from '@material-ui/core/colors/blueGrey';
 
 const useStyles = makeStyles(theme => ({
     root: {
-    height: 160,
+    height: 200,
     width: 220,
   },
   media: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function Tile({displayIcon, title}) {
+export default function Tile({displayIcon, title, description}) {
   const classes = useStyles();
 
   let history = useHistory();
@@ -48,8 +48,11 @@ export default function Tile({displayIcon, title}) {
       <CardActionArea>
         <CardContent className={classes.content}>
           {displayIcon()}
-          <Typography variant="body2" color="textSecondary" component="p" className={classes.distanceTop}>
+          <Typography variant="h6" color="textSecondary" component="p" className={classes.distanceTop}>
             {title}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.distanceTop}>
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>

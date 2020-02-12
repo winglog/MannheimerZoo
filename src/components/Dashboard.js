@@ -43,7 +43,7 @@ export default function NestedGrid() {
           return [
             <React.Fragment key={index}>
               <Grid item xs={12} sm={6} md={3} lg={2}>
-                <Tile displayIcon={card.displayIcon} title={card.title} />
+                <Tile displayIcon={card.displayIcon} title={card.title} description={card.description} />
               </Grid>
             </React.Fragment>
           ]
