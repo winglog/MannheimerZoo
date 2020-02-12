@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard';
 import Zebra from './components/pages/Zebra';
 import Tiger from './components/pages/Tiger';
 import Adler from './components/pages/Adler';
+import Papagei from './components/pages/Papagei';
 
 export default function App() {
 
@@ -29,6 +30,7 @@ export default function App() {
         <Route exact path="/Zebra" component={Zebra} />
         <Route exact path="/Tiger" component={Tiger} />
         <Route exact path="/Adler" component={Adler} />
+        <Route exact path="/Papagei" component={Papagei} />
       </Switch>
     </Router>
   )

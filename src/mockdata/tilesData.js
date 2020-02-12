@@ -25,6 +25,7 @@ const aCards = [{
   "visible": true
 },{
   "title": "Papagei",
+  "description": "formValueSelector",
   "displayIcon": () => {
     return (<AccessAlarmSharpIcon />);
   },
