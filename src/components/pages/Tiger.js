@@ -36,7 +36,7 @@ const Tiger = () => {
     <React.Fragment>
       <Container maxWidth="lg">
         <Typography component="div" style={{
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.primary.light,
           color: theme.palette.primary.contrastText,
           height: '80px',
           padding: 20
@@ -55,7 +55,7 @@ const Tiger = () => {
         </Typography>
 
         <Typography component="div" style={{
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.primary.light,
           color: theme.palette.primary.contrastText,
           height: '80px',
           padding: 20,

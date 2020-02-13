@@ -19,7 +19,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import MaterialUiForms from '../MaterialUiForms';
+import MuiFormCountries from '../MuiFormCountries';
 import showResults from "../showResults";
 
 import { useTheme } from '@material-ui/core/styles';
@@ -90,10 +90,10 @@ const Adler = (props) => {
         <Typography component="div" style={{
           backgroundColor: theme.palette.secondary.light,
           color: theme.palette.secondary.contrastText,
-          height: '280px',
-          padding: '120px',
+          height: '150px',
+          padding: '10px 160px',
         }}>
-          <h2>Material UI Example</h2>
+          <h2>Material UI Form with AutoComplete Input Field</h2>
         </Typography>
 
         <Typography component="div" style={{
@@ -102,7 +102,7 @@ const Adler = (props) => {
           padding: 20
         }}>
           <Container maxWidth="xs">
-            <MaterialUiForms onSubmit={showResults}/>
+            <MuiFormCountries onSubmit={showResults}/>
           </Container>
         </Typography>
 
