@@ -48,6 +48,13 @@ const aCards = [{
     return (<AccessAlarmSharpIcon />);
   },
   "visible": true
+},{
+  "title": "Fish",
+  "description": "Formik Example",
+  "displayIcon": () => {
+    return (<AccessAlarmSharpIcon />);
+  },
+  "visible": true
 }];
 
 export default aCards;
