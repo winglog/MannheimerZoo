@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container';
 
 
 import Booklist from '../net-ninja-booklist/Booklist';
+import AddBook from '../net-ninja-booklist/AddBook';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -43,6 +44,7 @@ const Turtle = () => {
             <Container maxWidth="md">
 
               <Booklist />
+              <AddBook />
 
             </Container>
           </Typography>

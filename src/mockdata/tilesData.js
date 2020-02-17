@@ -1,6 +1,7 @@
 import React from 'react';
 import AccessibilityNewSharpIcon from '@material-ui/icons/AccessibilityNewSharp';
 import AccessAlarmSharpIcon from '@material-ui/icons/AccessAlarmSharp';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 
 const aCards = [{
   "title": "Zebra",
@@ -59,7 +60,7 @@ const aCards = [{
   "title": "Turtle",
   "description": "Net Ninja Booklist with GraphQL and MongoDB",
   "displayIcon": () => {
-    return (<AccessAlarmSharpIcon />);
+    return (<LibraryBooksIcon />);
   },
   "visible": true
 }];
