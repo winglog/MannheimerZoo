@@ -17,8 +17,9 @@ import Hund from "./components/pages/Hund";
 import Fish from "./components/pages/Fish";
 import Forelle from "./components/pages/Forelle";
 import Lachs from "./components/pages/Lachs";
-import Kabeljau from "./components/pages/Kabeljau";
 import Hundslachs from "./components/pages/Hundslachs";
+import Kabeljau from "./components/pages/Kabeljau";
+import Sardine from "./components/pages/Sardine"
 
 export default function App() {
 	const dispatch = useDispatch();
@@ -42,6 +43,8 @@ export default function App() {
 				<Route exact path="/Lachs" component={Lachs} />
 				<Route exact path="/Hundslachs" component={Hundslachs} />
 				<Route exact path="/Kabeljau" component={Kabeljau} />
+				<Route exact path="/Sardine" component={Sardine} />
+				
 			</Switch>
 		</Router>
 	);
