@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
-import { getAuthorsQuery } from '../queries/queries';
+import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries/queries';
+import * as compose from 'lodash.flowright';
 
 class AddBook extends Component {
 
@@ -17,7 +18,8 @@ class AddBook extends Component {
 
 
   displayAuthors(){
-    let data = this.props.data;
+    let data = this.props.getAuthorsQuery;
+    console.log(this.props);
     if(data.loading){
       return (<option disabled>Loading authors</option>);
     } else {
@@ -32,6 +34,16 @@ class AddBook extends Component {
   submitForm(e){
     e.preventDefault(); // The default behaviour of the browser to refresh the whole page on submitting a form should be prevented.
     console.log(this.state);
+    this.props.addBookMutation({
+      variables: {
+        name: this.state.name,
+        genre: this.state.genre,
+        authorId: this.state.authorId
+      },
+      refetchQueries: [{
+        query: getBooksQuery
+      }]
+    });
   }
 
   render() {
@@ -69,6 +81,8 @@ class AddBook extends Component {
   }
 }
 
-export default graphql(getAuthorsQuery)(AddBook);
-
-
+// Bind multiple Queries to one component:
+export default compose(
+  graphql(getAuthorsQuery, {name: "getAuthorsQuery"}),
+  graphql(addBookMutation, {name: "addBookMutation"})
+)(AddBook);
