@@ -12,9 +12,9 @@ const aCards = [
 		visible: true
 	},	{
 		title: "Lachs",
-		description: "Formik use library 'formik-material-ui'",
+		description: "Formik use Yup library to validate",
 		displayIcon: () => {
-			return <AccessibilityNewSharpIcon />;
+			return <AccessAlarmSharpIcon />;
 		},
 		visible: true
 	}
