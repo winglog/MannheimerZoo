@@ -18,13 +18,20 @@ const aCards = [
 		},
 		visible: true
 	}, {
+		title: "Hundslachs",
+		description: "Formik use 'getFieldProps()' to create your own fields",
+		displayIcon: () => {
+			return <AccessAlarmSharpIcon />;
+		},
+		visible: true
+	}, {
 		title: "Kabeljau",
 		description: "Formik use <Formik>",
 		displayIcon: () => {
 			return <AccessAlarmSharpIcon />;
 		},
 		visible: true
-	}
+	}, 
 ];
 
 export default aCards;
