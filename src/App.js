@@ -14,6 +14,9 @@ import Tiger from './components/pages/Tiger';
 import Adler from './components/pages/Adler';
 import Papagei from './components/pages/Papagei';
 import Hund from './components/pages/Hund';
+import Fish from './components/pages/Fish'
+import Forelle from './components/pages/Forelle'
+import Lachs from './components/pages/Lachs';
 
 export default function App() {
 
@@ -33,6 +36,9 @@ export default function App() {
         <Route exact path="/Adler" component={Adler} />
         <Route exact path="/Papagei" component={Papagei} />
         <Route exact path="/Hund" component={Hund} />
+        <Route exact path="/Fish" component={Fish} />
+        <Route exact path="/Forelle" component={Forelle} />
+        <Route exact path="/Lachs" component={Lachs} />
       </Switch>
     </Router>
   )
