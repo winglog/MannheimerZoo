@@ -17,6 +17,27 @@ const aCards = [
 			return <AccessAlarmSharpIcon />;
 		},
 		visible: true
+	}, {
+		title: "Hundslachs",
+		description: "Formik use 'getFieldProps()' to create your own fields",
+		displayIcon: () => {
+			return <AccessAlarmSharpIcon />;
+		},
+		visible: true
+	}, {
+		title: "Kabeljau",
+		description: "Formik use <Formik>",
+		displayIcon: () => {
+			return <AccessAlarmSharpIcon />;
+		},
+		visible: true
+	},  {
+		title: "Sardine",
+		description: "Formik use Formik and Fields, ErrorMessage...",
+		displayIcon: () => {
+			return <AccessAlarmSharpIcon />;
+		},
+		visible: true
 	}
 ];
 
