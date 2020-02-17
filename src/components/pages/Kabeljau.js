@@ -1,14 +1,34 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import Markdown from "markdown-to-jsx";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { useTheme } from "@material-ui/core/styles";
 
 import showResults from "../showResults";
-import ValidationYupFormikForm from "../formiks/ValidationYupFormikForm"
+import ValidationYupFormikForm from "../formiks/ValidationYupFormikForm";
+import descriptionText from "./Kabeljau.md";
+
+// let kabeljauText = `
+// # Lachs - Formik Validation with Yup Use basic and Formik HOC
+
+// formik tutorial: href="https://jaredpalmer.com/formik/docs/tutorial"
+
+// validation with Yup, so you don't need to write valdation scheema by
+// yourself.
+
+// Yup: https://github.com/jquense/yup
+// `
 
 const Kabeljau = () => {
 	const theme = useTheme();
+
+	const [desc, setDesc] = useState("");
+
+	useEffect(() => {
+		fetch(descriptionText)
+			.then(res => res.text())
+			.then(md => setDesc(md));
+	}, []);
 
 	return (
 		<React.Fragment>
@@ -22,21 +42,7 @@ const Kabeljau = () => {
 						padding: "60px"
 					}}
 				>
-					<h2>Lachs - Formik Validation with Yup</h2>
-					Use basic Formik function, validation with Yup, so you don't need to write valdation scheema by yourself. 
-					<p>
-						from:{" "}
-						<a
-							href="https://jaredpalmer.com/formik/docs/tutorial"
-							target="blank"
-						>
-							Formik Tutorial
-						</a>
-					</p>
-                    <p>
-                        Yup is a library which makes the validation very simple.
-                        Yup library: https://github.com/jquense/yup
-                    </p>
+					<Markdown children={desc} />
 				</Typography>
 
 				<Typography
