@@ -9,7 +9,7 @@ import ValidationYupFormikForm from "../formiks/ValidationYupFormikForm";
 import descriptionText from "./Kabeljau.md";
 
 // let kabeljauText = `
-// # Lachs - Formik Validation with Yup Use basic and Formik HOC
+// # Kabeljau - Formik Validation with Yup Use basic and Formik HOC
 
 // formik tutorial: href="https://jaredpalmer.com/formik/docs/tutorial"
 
@@ -25,11 +25,16 @@ const Kabeljau = () => {
 	const [desc, setDesc] = useState("");
 
 	useEffect(() => {
-		fetch(descriptionText)
-			.then(res => res.text())
-			.then(md => setDesc(md));
+		if (descriptionText.endsWith(".md")) {
+			fetch(descriptionText)
+				.then(res => res.text())
+				.then(md => setDesc(md));
+		}else{
+			setDesc(descriptionText)
+		}
 	}, []);
 
+	console.log(typeof descriptionText);
 	return (
 		<React.Fragment>
 			<Container maxWidth="lg">
@@ -42,7 +47,8 @@ const Kabeljau = () => {
 						padding: "60px"
 					}}
 				>
-					<Markdown children={desc} />
+					<Markdown>{desc}</Markdown>
+
 				</Typography>
 
 				<Typography
