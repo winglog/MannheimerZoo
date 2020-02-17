@@ -17,6 +17,13 @@ const aCards = [
 			return <AccessAlarmSharpIcon />;
 		},
 		visible: true
+	}, {
+		title: "Kabeljau",
+		description: "Formik use <Formik>",
+		displayIcon: () => {
+			return <AccessAlarmSharpIcon />;
+		},
+		visible: true
 	}
 ];
 
