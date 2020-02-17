@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -9,7 +9,7 @@ import Container from '@material-ui/core/Container';
 import Booklist from '../net-ninja-booklist/Booklist';
 import AddBook from '../net-ninja-booklist/AddBook';
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     appBar: {
       top: 'auto',

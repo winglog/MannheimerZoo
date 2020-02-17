@@ -9,7 +9,7 @@
  ****************************************************************************/
 import React from 'react';
 
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
@@ -18,7 +18,7 @@ import showResults from "../showResults";
 
 import { useTheme } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles((theme) =>
   createStyles({
     appBar: {
       top: 'auto',
@@ -50,7 +50,7 @@ const Tiger = () => {
           padding: 20
         }}>
           <Container maxWidth="xs">
-            <MaterialUiForms onSubmit={showResults}/>
+            <MaterialUiForms onSubmit={showResults} />
           </Container>
         </Typography>
 
