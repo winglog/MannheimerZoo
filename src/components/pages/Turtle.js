@@ -1,13 +1,10 @@
 import React from 'react';
 
-
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-import { gql } from 'apollo-boost';
-import { graphql } from 'react-apollo';
 
 import Booklist from '../net-ninja-booklist/Booklist';
 
@@ -21,21 +18,10 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
-const getBooksQuery = gql`
-{
-  books {
-    name
-    id
-  }
-}
-`;
-
-
-const Turtle = (props) => {
+const Turtle = () => {
 
     const theme = useTheme();
     const classes = useStyles();
-    console.log(props);
 
     return (
       <React.Fragment>
@@ -68,4 +54,4 @@ const Turtle = (props) => {
 
 };
 
-export default graphql(getBooksQuery)(Turtle);
+export default Turtle;
