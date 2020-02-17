@@ -17,6 +17,7 @@ import Hund from './components/pages/Hund';
 import Fish from './components/pages/Fish'
 import Forelle from './components/pages/Forelle'
 import Lachs from './components/pages/Lachs';
+import Turtle from './components/pages/Turtle';
 
 export default function App() {
 
@@ -39,6 +40,7 @@ export default function App() {
         <Route exact path="/Fish" component={Fish} />
         <Route exact path="/Forelle" component={Forelle} />
         <Route exact path="/Lachs" component={Lachs} />
+        <Route exact path="/Turtle" component={Turtle} />
       </Switch>
     </Router>
   )
