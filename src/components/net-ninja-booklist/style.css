@@ -26,7 +26,7 @@
   color: #880e4f;
 }
 
-form {
+#add-book {
   background: #fff;
   padding: 20px;
   position: fixed;
@@ -35,24 +35,24 @@ form {
   width: 400px;
 }
 
-form .field {
+#add-book .field {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
 }
 
-form .label {
+#add-book .label {
   text-align: right;
   padding: 6px;
 }
 
-form select, form input {
+#add-book select, #add-book input {
   margin: 4px;
   padding: 6px;
   box-sizing: border-box;
 }
 
-form button {
+#add-book button {
   margin: 14px;
   color: #fff;
   font-size: 2em;
