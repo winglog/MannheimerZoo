@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries/queries';
 import * as compose from 'lodash.flowright';
+import './style.css';
 
 class AddBook extends Component {
 
