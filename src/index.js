@@ -46,6 +46,17 @@ const theme = createMuiTheme({
       contrastText: '#000',
     },
   },
+  buttonStyle: {
+    background: 'linear-gradient(45deg, #222 10%, #999 90%)',
+    border: '1px black solid',
+    borderRadius: 5,
+    boxShadow: '0 3px 5px 2px rgba(0, 0, 0, .3)',
+    color: '#fff',
+    height: 48,
+    minWidth: '120px',
+    padding: '0 30px',
+    cursor: 'pointer'
+  },
 });
 
 ReactDOM.render(
